@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--기기화면 너비 맞춤-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--렌더링 엔진을 강제로 최신 렌더링 엔진으로 지정-->
     <title>First web</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <!--주석-->
 
@@ -114,12 +115,26 @@
         <label for="apple">apple</label>
         <input type="checkbox" id="orange" name="orange" checked>
         <label for="orange">orange</label>
-
-
-
     </fieldset>
+    <br>
 
-
+    <table>
+        <tr>
+            <th scope="col">구분</th>
+            <th scope="col">중간고사</th>
+            <th scope="col">기말고사</th>
+        </tr>
+        <tr>
+            <th scope="row">전공</th>
+            <td>A+</td>
+            <td>B+</td>
+        </tr>
+        <tr>
+            <th scope="row">교양</th>
+            <td>C-</td>
+            <td>B</td>
+        </tr>
+    </table>
 </body>
 
 </html>
