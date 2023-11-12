@@ -23,3 +23,26 @@ a {
     font-size: 24px;
    
 }
+/* id선택할 때는 #을 이용함. */
+/* #title {
+    color:green;
+} */
+
+form > h2{
+    color: gray;
+}
+
+h2{
+    color: blue;
+}
+
+.red {
+    color:red;
+}
+div ul{
+    list-style: none;
+}
+
+div p {
+    color:red;
+}
