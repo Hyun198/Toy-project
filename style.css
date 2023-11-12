@@ -1,3 +1,9 @@
+/*태그 선택*/
+
+*{
+    text-decoration: none;
+}
+
 table {
     width: 100%;
     border: 1px solid;
@@ -7,4 +13,13 @@ table {
 th, td {
     border: 1px solid;
     text-align: center;
+}
+
+img {
+    width: 50px;
+}
+
+a {
+    font-size: 24px;
+   
 }
