@@ -28,21 +28,16 @@ a {
     color:green;
 } */
 
-form > h2{
-    color: gray;
+
+
+p:nth-of-type(2) {
+    color: red;
+    background-color: aqua;
 }
 
-h2{
+p:nth-last-of-type(2) {
     color: blue;
 }
-
-.red {
-    color:red;
-}
-div ul{
-    list-style: none;
-}
-
-div p {
-    color:red;
+span:first-of-type {
+    color: green;
 }
