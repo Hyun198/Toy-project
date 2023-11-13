@@ -1,0 +1,23 @@
+body{
+    margin:0;
+    height: 4000px;
+}
+
+.box{
+    width:100px;
+    height:100px;
+}
+
+.red-box{
+    background-color: red;
+}
+
+.green-box{
+    background-color: green;
+    position: sticky;
+    top:0;
+}
+
+.blue-box{
+    background-color: blue;
+}
