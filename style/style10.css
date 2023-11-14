@@ -1,0 +1,29 @@
+div{
+    width:100px;
+    height:100px;
+    background-color: red;
+    /* animation-name: bgchange;
+    animation-duration: 5s;
+    animation-play-state: paused;
+    animation-fill-mode: both; 
+    animation-iteration-count: infinite;  */
+    animation:bgchange 5s 3 ease-in;
+}
+
+
+
+@keyframes bgchange{
+    0%{background-color:red;}
+    25%{background-color: orange;}
+    50%{background-color: yellow;}
+    100%{background-color: green;}
+}
+
+@keyframes move {
+    from{
+        left:0;
+    }
+    to{
+        left:300px;
+    }
+}

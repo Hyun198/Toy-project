@@ -22,3 +22,8 @@
     transition-delay
 
     transition: , , , ,
+
+## animation
+    두 가지 속성이 있어야만 전환효과 적용
+    animation-name
+    animation-duration
