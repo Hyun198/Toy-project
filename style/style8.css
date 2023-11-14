@@ -13,7 +13,7 @@
 }
 
 .container{
-    width:10px;
+    padding:10px;
     color:white;
     border: solid 1px black;
 
@@ -21,7 +21,7 @@
 
 .bar{
     width:100px;
-    background-color: red;
+    background-color: green;
     transition-property: width;
     transition-duration: 1s;
     margin-bottom: 10px;
@@ -32,21 +32,6 @@
 }
 
 .bar:nth-child(1){
-    transition-timing-function: linear;
+    transition:width, 1s, ease-in, 1s;
 }
 
-.bar:nth-child(2){
-    transition-timing-function: ease;
-}
-
-.bar:nth-child(3){
-    transition-timing-function: ease-in;
-}
-
-.bar:nth-child(4){
-    transition-timing-function: ease-out;
-}
-
-.bar:nth-child(5){
-    transition-timing-function: ease-in-out;
-}
