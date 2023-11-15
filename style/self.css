@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    width:350px;
+    height:350px;
+    padding:18px;
+    background-color: #ffff99;
+    transform: rotate(10deg);
+    text-align: center;
+    font-family: 'Nanum Pen Script',cursive;
+    position:relative;
+    margin:100px;
+}
+
+div h1{
+    font-size:44px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+div p{
+    font-size: 25px;
+    margin-bottom: 20px;
+    
+}
+
+
+
+#login {
+    width:304px;
+    height:390px;
+    padding: 28px 38px;
+    border: 1px solid #000;
+    margin: 100px auto;
+
+}
+
+#login fieldset{
+    border:none;
+}
+
+#login img{
+    width: 20px;
+    height: 20px;
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+
+#login fieldset legend{
+    position: absolute;
+    top: -999999px;
+}
+
+#login input {
+    width:228px;
+    height:44px;
+    border: none;
+    padding: 0 10px;
+    background-color: #eaeaea;
+    margin-bottom: 21px;
+}
+
+
+#login button {
+    display:flex;
+    padding:5px;
+    width: 228px;
+    height:44px;
+    border: 1px solid #000;
+    background-color: white;
+    font-size: 14px;
+    align-items: center;
+    cursor: pointer;
+}
+
+#login button[type="submit"] {
+    background-color: #2C3432;
+    color:white;
+    font-family: 'Roboto',sans-serif;
+    margin-bottom: 27px;
+    font-weight: normal;
+}
+
+#login > fieldset + p{
+    margin:24px 0;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+#login a{
+    text-decoration: none;
+    color:#2c3432;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    display: block;
+}
