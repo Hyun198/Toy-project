@@ -31,3 +31,8 @@
 ## cdn (content delivery network)?
 
     CDN은 이 컨텐츠와 사용자 간의 거리를 줄여 웹사이트 퍼블리셔가 성능을 향상하고, 사용자가 경험하는 로딩 시간을 단축하고, 대역폭 소비 및 비용을 관리할 수 있게 합니다.
+
+
+
+
+참고:https://github.com/gilbutITbook/080313
