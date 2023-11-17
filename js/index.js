@@ -24,7 +24,7 @@ for(let i=1; i<=9; i++){
 }
  */
 
-for(let i=1; i<10; i++){
+/* for(let i=1; i<10; i++){
     for(let k=0; k<10; k++){
         for(let j=0; j<10; j++){
             let sum = (i**3)+(k**3)+(j**3);
@@ -34,4 +34,15 @@ for(let i=1; i<10; i++){
             }
         }
     }
+} */
+
+
+const gugudan = function gugudan() {
+    for (let i = 1; i < 10; i++) {
+        for (let j = 1; j < 10; j++) {
+            console.log(`${i}*${j}=${i * j}\n`);
+        }
+    }
 }
+
+gugudan();

@@ -1,11 +1,13 @@
 ## background
+
     background-size
     background-postion
     background-repeat
     background-attachment
 
 ## position
-    static : 기본흐름에 맞춰서 
+
+    static : 기본흐름에 맞춰서
     relative : 기본흐름에 따라 배치, 좌표 속성 사용 가능
         --relative-top
         --relative-bottom
@@ -16,6 +18,7 @@
     sticky : static처럼 기본 흐름에 따라 배치, 지정한 좌표의 임계점에 이르면 fixed
 
 ## transition
+
     transition-property
     transition-duration
     transition-timing-function
@@ -24,6 +27,7 @@
     transition: , , , ,
 
 ## animation
+
     두 가지 속성이 있어야만 전환효과 적용
     animation-name
     animation-duration
@@ -34,9 +38,11 @@
 
 ## javascript
 
-    변수,상수 
+    변수,상수
     자료형
     객체 리터럴
 
+    함수
+    function 식별자 (){}
 
 참고:https://github.com/gilbutITbook/080313
