@@ -44,5 +44,6 @@
 
     함수
     function 식별자 (){}
+    es6 에서 함수는 화살표로 표현
 
 참고:https://github.com/gilbutITbook/080313

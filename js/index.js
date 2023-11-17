@@ -37,12 +37,11 @@ for(let i=1; i<=9; i++){
 } */
 
 
-const gugudan = function gugudan() {
+/* const gugudan = function gugudan() {
     for (let i = 1; i < 10; i++) {
         for (let j = 1; j < 10; j++) {
             console.log(`${i}*${j}=${i * j}\n`);
         }
     }
-}
+} */
 
-gugudan();
