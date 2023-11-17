@@ -45,3 +45,56 @@ for(let i=1; i<=9; i++){
     }
 } */
 
+/* function gugudan (dan) {
+    for (let i=1; i<10; i++){
+        console.log(`${dan} * ${i} = ${dan*i}`);
+    }
+}
+
+gugudan(5); */
+
+
+
+
+/* const sum =(num1, num2)=>num1+num2;  //()없으면 바로 return
+
+const result = sum(1,2);
+console.log(result); */
+
+
+/* function getArrayMaxNumber(arr){
+    let max=-214000;
+    for(let i of arr){
+        if (max<=i){
+            max=i;
+        }
+    }
+    return max;
+} */
+
+/* const max = getArrayMaxNumber([10,50,30]);
+console.log(max); 
+
+
+function getArr(arr){
+    let result=0;
+    for(let i =0; i<arr.length; i++){
+        if(result<arr[i]){
+            result=arr[i];
+        }
+    }
+    return result;
+} */
+
+
+const getArr = (arr) => {
+    let result=0;
+    for(let i=0; i<arr.length; i++){
+        if (result<arr[i]){
+            result=arr[i];
+        }
+    }
+    return result
+}
+
+console.log(getArr([10,50,30]));
