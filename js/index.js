@@ -87,7 +87,7 @@ function getArr(arr){
 } */
 
 
-const getArr = (arr) => {
+/* const getArr = (arr) => {
     let result=0;
     for(let i=0; i<arr.length; i++){
         if (result<arr[i]){
@@ -97,4 +97,47 @@ const getArr = (arr) => {
     return result
 }
 
-console.log(getArr([10,50,30]));
+console.log(getArr([10,50,30])); */
+
+/* let a =10;
+(function sum() {
+    console.log(`함수 내부: ${a}`);
+})(); //즉시 실행 함수
+sum();
+ */
+/* const circle = (r) => {
+    return r*r*3.14;
+}
+
+
+
+const max = (arr) => {
+    let result=0;
+    for(let i=0; i<arr.length; i++){
+        if (result<arr[i]){
+            result=arr[i]
+        }
+    }
+    return result;
+}
+
+console.log(max([10,50,30])); */
+
+
+const BMI = (height, weight) => {
+    let r_height = height / 100;
+    let result = weight / (r_height * r_height);
+    result = Math.round(result*10)/10;
+    console.log(result);
+    if (result > 25) {
+        return '비만';
+    } else if (result > 24 && result <= 25) {
+        return '과체중';
+    } else if (18.5 < result && result <= 24) {
+        return '정상';
+    } else {
+        return '저체중';
+    }
+};
+
+console.log(BMI(170, 69));
