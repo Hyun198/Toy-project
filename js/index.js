@@ -124,7 +124,7 @@ const max = (arr) => {
 console.log(max([10,50,30])); */
 
 
-const BMI = (height, weight) => {
+/* const BMI = (height, weight) => {
     let r_height = height / 100;
     let result = weight / (r_height * r_height);
     result = Math.round(result*10)/10;
@@ -140,4 +140,26 @@ const BMI = (height, weight) => {
     }
 };
 
-console.log(BMI(170, 69));
+console.log(BMI(170, 69)); */
+
+
+/* const person = {
+    name: {
+        firstName: "Gildong",
+        lastName: "Hong"
+    },
+    age:20,
+    likes:["apple","samsung"],
+    printHello: function() {
+        return "hello";
+    }
+};*/
+
+const studentObj = {
+    name: "John",
+    age:20,
+};
+studentObj.gender = "male";
+delete studentObj.age;
+
+console.log(studentObj);
