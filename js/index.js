@@ -168,7 +168,7 @@ if(email.indexOf("@") === -1) {
 }
  */
 
-const arr= [10,20,30,40];
+
 /* 
 arr.push(50);
 console.log(arr);
@@ -186,9 +186,20 @@ console.log(arr); */
 /* const date = new Date();
 console.log(date); */
 
-function getMaxRandom(max){
+/* function getMaxRandom(max){
     return Math.floor(Math.random()*max)+1;
 } //0이상 20이하의 무작위 수
 
 const maxRandom = getMaxRandom(20);
 console.log(maxRandom);
+ */
+
+const arr = [10,120,30,50,20];
+
+arr.sort(function(a,b){
+    if(a<b) return 1;
+    else if(a>b) return -1;
+    else return 0;
+})
+
+console.log(arr[0]);
