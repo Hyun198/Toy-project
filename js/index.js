@@ -155,11 +155,40 @@ console.log(BMI(170, 69)); */
     }
 };*/
 
-const studentObj = {
+/* const studentObj = {
     name: "John",
     age:20,
 };
 studentObj.gender = "male";
 delete studentObj.age;
 
-console.log(studentObj);
+const email = "test!naver.com";
+if(email.indexOf("@") === -1) {
+    console.log("올바르지 않은 이메일");
+}
+ */
+
+const arr= [10,20,30,40];
+/* 
+arr.push(50);
+console.log(arr);
+arr.pop()
+console.log(arr);
+arr.unshift(0);
+console.log(arr);
+arr.shift();
+console.log(arr); */
+
+/* arr.forEach(function(v){
+    console.log(v);
+}) */
+
+/* const date = new Date();
+console.log(date); */
+
+function getMaxRandom(max){
+    return Math.floor(Math.random()*max)+1;
+} //0이상 20이하의 무작위 수
+
+const maxRandom = getMaxRandom(20);
+console.log(maxRandom);
