@@ -46,4 +46,11 @@
     function 식별자 (){}
     es6 에서 함수는 화살표로 표현
 
+## javascript 표준 내장 객체
+
+    String 객체
+    Array 객체
+    Date 
+    Math
+
 참고:https://github.com/gilbutITbook/080313
