@@ -10,6 +10,7 @@
 <body>
     <button onclick="printInfo()">window 객체 속성</button>
     <button onclick="popup()">팝업</button>
+    <button onclick="scroll()">스크롤</button>
 </body>
 <script>
     function printInfo() {
@@ -25,6 +26,12 @@
 
     function popup() {
         window.open('popup.html', '팝업', 'width=200, height=100');
+    };
+
+
+    function scroll() {
+        window.scrollTo(100, 200);
+
     }
 </script>
 
