@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="printInfo()">window 객체 속성</button>
+    <button onclick="popup()">팝업</button>
+</body>
+<script>
+    function printInfo() {
+        console.log(`웹 브라우저 너비: ${window.innerWidth}`);
+        console.log(`웹 브라우저 높이: ${window.innerHeight}`);
+        console.log(`웹 브라우저 창의 너비: ${window.outerWidth}`);
+        console.log(`웹 브라우저 창의 높이: ${window.outerHeight}`);
+        console.log(`웹 브라우저 창 위쪽 면과 모니터 사이의 간격: ${window.screenTop}`);
+        console.log(`웹 브라우저 창 왼쪽 면과 모니터 사이의 간격: ${window.screenLeft}`);
+        console.log(`웹 브라우저 창의 스크롤 가로 위치: ${window.scrollX}`);
+        console.log(`웹 브라우저 창의 스크롤 세로 위치: ${window.scrollY}`);
+    };
+
+    function popup() {
+        window.open('popup.html', '팝업', 'width=200, height=100');
+    }
+</script>
+
+</html>
