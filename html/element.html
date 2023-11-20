@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element</title>
+</head>
+<body>
+    <h1 id="title">title</h1>
+    <p class="text">text-1</p>
+    <p class="text">text-2</p>
+    
+
+    <script>
+        const el = document.getElementById("title");
+        console.log(el);
+
+        const classE1 = document.getElementsByClassName("text");
+        console.log(classE1[0]);
+        console.log(classE1[1]);
+
+        const tagEls = document.getElementsByTagName("p");
+        console.log(tagEls[0]);
+        console.log(tagEls[1]);
+    </script>
+
+</body>
+</html>
