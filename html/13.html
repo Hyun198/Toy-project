@@ -6,29 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-    <a id="naver"></a>
-    <a id="daum"></a>
+
     <script>
-        const txtEl = document.createTextNode("네이버");
+     /*    const txtEl = document.createTextNode("네이버");
         document.querySelector("#naver").appendChild(txtEl);
 
         const hrefAttr = document.createAttribute("href");
         hrefAttr.value = "https://www.naver.com";
         document.querySelector("#naver").setAttributeNode(hrefAttr);
 
-        /* const txtEl2 = document.createTextNode("포이즌애플");
+        const txtEl2 = document.createTextNode("포이즌애플");
         document.querySelector("#apple").appendChild(txtEl2);
         const hrefAttr2 = document.createAttribute("href");
         hrefAttr2.value = "https://www.poisonapple.co.kr/";
-        document.querySelector("#apple").setAttributeNode(hrefAttr2) */;
+        document.querySelector("#apple").setAttributeNode(hrefAttr2); */
         
-        const childNodes = document.body.childNodes;
-        childNodes.forEach((node)=> {
-            if(node.nodeName === "a"){
-                node.parentNode.removeChild(node);
-            }
-        })
+        const img = document.createElement('img');
+        document.body.appendChild(img); 
        
+        img.src="../img/google.png";
+        img.alt= "샘플 이미지";
+        
+
     </script>
 </body>
 </html>
