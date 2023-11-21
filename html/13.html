@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="naver"></a>
+    <a id="daum"></a>
+    <script>
+        const txtEl = document.createTextNode("네이버");
+        document.querySelector("#naver").appendChild(txtEl);
+
+        const hrefAttr = document.createAttribute("href");
+        hrefAttr.value = "https://www.naver.com";
+        document.querySelector("#naver").setAttributeNode(hrefAttr);
+
+        /* const txtEl2 = document.createTextNode("포이즌애플");
+        document.querySelector("#apple").appendChild(txtEl2);
+        const hrefAttr2 = document.createAttribute("href");
+        hrefAttr2.value = "https://www.poisonapple.co.kr/";
+        document.querySelector("#apple").setAttributeNode(hrefAttr2) */;
+        
+        const childNodes = document.body.childNodes;
+        childNodes.forEach((node)=> {
+            if(node.nodeName === "a"){
+                node.parentNode.removeChild(node);
+            }
+        })
+       
+    </script>
+</body>
+</html>
