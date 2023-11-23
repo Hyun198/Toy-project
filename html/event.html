@@ -6,20 +6,61 @@
     <title>Event </title>
 </head>
 <body>
-    <p>text-1</p>
-    <p>text-2</p>
-    <p>text-3</p>
+    <form action="#">
+        <fieldset>
+            <legend>로그인</legend>
+            <button type="button">log in with google</button>
+        </fieldset>
+        <p>or</p>
+        <fieldset>
+            <legend>일반 로그인</legend>
+            <label for="username">
+                <input type="text" id="username" name="username" placeholder="Username">
+            </label>
+            <label for="password">
+                <input type="password" id="password" name="password" placeholder="Password">
+            </label>
+            <button type="submit">Login</button>
+        </fieldset>
+        <a href="#">Forgot your password?</a>
+    </form>
+
     <script>
-        const pEls = document.querySelectorAll("p");
-        pEls.forEach((el)=> {
-            el.addEventListener("click", function(){
-                if(this.style.color=="red"){
-                    this.style.color = "black";
+        //폼 전송 이벤트를 취소해라
+        const formEl=document.querySelector("form");
+        formEl.addEventListener("submit", function(e){
+            e.preventDefault();
+            //아이디가 입력됐는지 확인, 입력되지 않았으면 "아이디를 입력해 주세요." 경고창 표시
+            const username = document.getElementById("username");
+            if(username.value === ""){
+                //아이디 입력란 체크
+                alert("아이디를 입력해 주세요.");
+            }else{
+                //아이디가 이메일 형식인지 확인
+                if(!username.value.includes("@")){
+                    alert("아이디를 이메일 형식으로 작성해주세요.");
                 }else{
-                    this.style.color ="red";
+                    const password= document.getElementById("password");
+                    if(password.value === ""){
+                        alert("비밀번호를 입력해 주세요.")
+                    }else{
+                        if(password.value.length <=4){
+                            alert("비밀번호를 5자리 이상 입력해주세요.");
+                        }else{
+                            console.log("로그인 성공");
+                            
+                            //수동으로 다시 호출
+                            formEl.submit();
+                        }
+                    }
                 }
-            })
-        })
+
+            }
+            
+        });
+
+     
+
     </script>
 </body>
 </html>

@@ -1,3 +1,21 @@
+document.getElementById("test").textContent = "자바 스크립트";
+console.log("node", document.getElementById("test"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* let arr = ["orange", "banana", "apple"];
 
 for (let index in arr) {
@@ -194,7 +212,7 @@ const maxRandom = getMaxRandom(20);
 console.log(maxRandom);
  */
 
-const arr = [10,120,30,50,20];
+/* const arr = [10,120,30,50,20];
 
 arr.sort(function(a,b){
     if(a<b) return 1;
@@ -202,4 +220,4 @@ arr.sort(function(a,b){
     else return 0;
 })
 
-console.log(arr[0]);
+console.log(arr[0]); */
