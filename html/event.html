@@ -6,29 +6,20 @@
     <title>Event </title>
 </head>
 <body>
-    <a href="https://www.naver.com">네이버</a>
+    <p>text-1</p>
+    <p>text-2</p>
+    <p>text-3</p>
     <script>
-        /* const btnEl = document.querySelector("button");
-        btnEl.addEventListener("click" , function(event) {
-            console.log(`clientX: ${event.clientX}`);
-            console.log(`clientY: ${event.clientY}`);
-            console.log(`pageX: ${event.pageX}`);
-            console.log(`pageY: ${event.pageY}`);
-            console.log(`screenX: ${event.screenX}`);
-            console.log(`screenY: ${event.screenY}`);
-        }); */
-        /* const inputEl = document.querySelector("input");
-        inputEl.addEventListener("keydown" , function(event) {
-            console.log(`keycode: ${event.keyCode}`);
-            console.log(`ctrlkey:${event.ctrlKey}`);
-            console.log(`altkey: ${event.altKey}`);
-            console.log(`shiftkey:${event.shiftKey}`);
-        }) */
-        const aEl = document.querySelector("a");
-        aEl.addEventListener("click", function(e){
-            e.preventDefault();
+        const pEls = document.querySelectorAll("p");
+        pEls.forEach((el)=> {
+            el.addEventListener("click", function(){
+                if(this.style.color=="red"){
+                    this.style.color = "black";
+                }else{
+                    this.style.color ="red";
+                }
+            })
         })
-
     </script>
 </body>
 </html>
