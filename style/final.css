@@ -23,7 +23,7 @@ li{
 header{
     position: fixed;
     /* background-color: rgb(154, 151, 151); */
-    color:  rgb(98, 28, 28);
+    color:  white;
     top:0;
     z-index:1;
     width:100%;
@@ -47,6 +47,7 @@ header nav ul li {
 
 header button {
     background: transparent;
+    color:white;
     border:0;
     cursor: pointer;
 }
@@ -57,7 +58,7 @@ header h1 button {
 }
 header nav ul li button {
     font-size: 1.2rem;
-    color: rgb(98, 28, 28);
+    color: white;
 }
 
 
@@ -66,17 +67,17 @@ header nav ul li button {
 main {
     width:100%;
     height:100vh;
-    color:  black;
+    color:  white;
     display:flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('https://images.pexels.com/photos/1478524/pexels-photo-1478524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background: url('https://images.pexels.com/photos/2536875/pexels-photo-2536875.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     background-size:cover;
 }
 
 main h4{
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 main h2{
@@ -90,16 +91,16 @@ main p {
     max-width:500px;
     margin: 0 auto;
     font-size: 1.25rem;
-    color:  black;
+    color:  white;
 }
 
 main button.download{
     background-color: transparent;
-    border: 3px solid black;
+    border: 3px solid white;
     border-radius: 20px;
     padding: 1rem 2rem;
     margin-top: 3rem;
-    color:  black;
+    color:  white;
     font-weight: bold;
     cursor: pointer;
 }
@@ -107,7 +108,7 @@ main button.download{
 main button.mouse{
     background-color: transparent;
     border:none;
-    color: black;
+    color: white;
     font-size: 2rem;
     position: absolute;
     bottom:1rem;
@@ -133,7 +134,7 @@ main h2 span::after {
     content:"";
     height:40px;
     width:3px;
-    background-color: black;
+    background-color: white;
     display:inline-block;
     animation:blink .7s ease-in-out infinite;
 }
@@ -162,7 +163,7 @@ section .title{
 
 section .title h4{
     font-size: 1.35rem;
-    color:#ed4848;
+    color:rgb(53, 75, 214);
     position: relative;
 }
 section .title h2{
@@ -200,7 +201,7 @@ section .about-self .right h3{
 }
 
 section .about-self .right h3 strong{
-    color:#ed4848;
+    color:rgb(53, 75, 214)  ;
 }
 
 section .about-self .right p{
@@ -235,12 +236,12 @@ section .do-me .do-inner:last-child{
 
 section .do-me .do-inner .icon i{
     font-size:2.5rem;
-    color: #ff6a6a;
+    color: rgb(53, 75, 214)
 }
 
 section .do-me .do-inner .content h3{
     font-size: 2rem;
-    margin:1rem 0;
+    margin:1rem ;
 }
 
 section .do-me .do-inner .content p {
@@ -248,10 +249,57 @@ section .do-me .do-inner .content p {
 }
 
 section .do-me .do-inner:hover{
-    background-color: lightcoral;
-    color: lightcoral;
+    background-color: rgb(53, 75, 214);
+    color: black;
 }
+
+
 
 section .do-me .do-inner:hover i{
     color:white;
+}
+
+.bg{
+    background:url('https://images.pexels.com/photos/1509534/pexels-photo-1509534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height:650px;
+}
+
+/* end section what i do */
+
+section.portfolio::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+section.portfolio .portfolio-inner{
+    width:30%;
+    margin-right:5%;
+    float:left;
+    padding: 1rem 1rem 1.5rem 1rem;
+    border: 1px solid #ccc;
+    margin-bottom: 3rem;
+    cursor: pointer;
+}
+
+section.portfolio .portfolio-inner:hover{
+    background-color: rgb(53, 75, 214);
+    color:white;
+}
+
+section.portfolio .portfolio-inner:nth-child(3n){
+    margin-right: 0;
+}
+    
+section.portfolio .portfolio-inner img{
+    width:100%;
+    height: 300px;
+    display:block;
+}
+
+section.portfolio .portfolio-inner strong{
+    color:rgb(53, 75, 214);
+
 }
