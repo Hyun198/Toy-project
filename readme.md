@@ -62,4 +62,10 @@
     navigator
     screen
 
+## map, reduce, filter
+
+    map 반복문을 돌며 배열안의 요소들을 1대1로 짝지어 줌.
+
+    reduce ((누적값, 현잿값, 인덱스 ,요소)=> { return result},초깃값)
+
 참고:https://github.com/gilbutITbook/080313
