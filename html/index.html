@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .none_div {
+            display: flex;
+            background-color: brown;
+        }
+
+        .block_div {
+            display: block;
+
+            background-color: red;
+        }
+
+        .inline_div {
+            display: inline;
+
+            background-color: blue;
+        }
+
+        .inline-block_div {
+            display: inline-block;
+            background-color: aqua;
+        }
+
+        .container {
+            display: flex;
+            background-color: yellow;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .container .item {
+            background-color: green;
+            margin: 2px 2px 0px 0px;
+        }
+
+        .container .item:nth-child(1) {
+            flex-shrink: 0;
+            width: 100px;
+        }
+
+        .container .item:nth-child(2) {
+            flex-grow: 1;
+            z-index: 1;
+            transform: scale(2);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="none_div">I am None</div>
+    <div class="block_div">I am block_div</div>
+    <div class="inline_div">I am inline</div>
+    <div class="inline-block_div">I am inline-block</div>
+
+    <div class="container">
+        <div class="item">AAA</div>
+        <div class="item">BBBBBBBBBBBBBBB</div>
+        <div class="item">CCCCCC</div>
+    </div>
+
+</body>
+
+</html>
