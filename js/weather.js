@@ -16,15 +16,25 @@ const cities = document.querySelectorAll('.city');
 
 let cityInput = "London";
 
+<<<<<<< HEAD
 /* cities.forEach((city) => {
+=======
+cities.forEach((city) => {
+>>>>>>> 42bcca1e779177e79086641c67a94e7603618396
     city.addEventListener('click', (e) => {
         cityInput = e.target.innerHTML;
         fetchWeatherData();
         app.style.opacity = "0";
     });
+<<<<<<< HEAD
 }); */
 
 /* form.addEventListener('submit', (e) => {
+=======
+});
+
+form.addEventListener('submit', (e) => {
+>>>>>>> 42bcca1e779177e79086641c67a94e7603618396
     if (search.value.length == 0) {
         alert('please type in a city name');
     } else {
@@ -49,5 +59,17 @@ function dayOfTheWeek(day, month, year) {
         "Saturday",
     ];
     return weekday[new Date(`${day}/${month}/${year}`).getDay()];
+<<<<<<< HEAD
 }; */
 //8fdfdf872e2612c93e651a56809e1508  api key
+=======
+};
+
+/* function fetchWeatherData() {
+    fetch(`http://api.weatherapi.com/v1/current.json?key={}=${cityInput}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        });
+} */
+>>>>>>> 42bcca1e779177e79086641c67a94e7603618396
