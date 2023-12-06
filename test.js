@@ -1,37 +1,32 @@
-const button = document.querySelector(".button");
-const API_KEY = '8fdfdf872e2612c93e651a56809e1508';
+const container = document.querySelector('.container');
+const search = document.querySelector('.search-box button');
+const weatherBox = document.querySelector('.weather-box');
+const weatherDetails = document.querySelector('.weather-details');
 
 
+search.addEventListener('click', () => {
+    const APIKey = '2d9656e12a5cfa0fd6b7cbebd84d6e23';
+    const city = document.querySelector('.serach-box input').value;
+    if (city == '') {
+        return;
+    }
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`)
+        .then(response => response.json()).then(json => {
 
-button.addEventListener('click', () => {
-    navigator.geolocation.getCurrentPosition(success, fail);
-});
-const success = (position) => {
-    const lat = position.coords.latitude; 
-    const long= position.coords.longitude;
-
-    getWeather(lat, long);
-}
-const fail = ()=>{
-    alert("좌표를 불러올 수 없음");
-}
-
-const tempSection = document.querySelector('.temperature');
-const placeSection = document.querySelector('.place');
-const descSection = document.querySelector('.description');
-const getWeather = (lat,lon) => {
-    fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=kr`
-    ).then((response)=> {
-        const temperature = response.json();
-        const place= response.name;
-
-        
-        console.log(temperature);
-        console.log(place); //undefined
-    }).catch((error)=>{
-        alert(error);
-    });
-}
+            const image = document.querySelector('weather-box i');
+            const temperature = document.querySelector('weather-box .temperature');
+            const description = document.querySelector('weather-box .description');
+            const humidity = document.querySelector('weather-details .humidity span');
+            const wind = document.querySelector('weather-details .wind span');
 
 
+            switch (json.weather[0].main) {
+                case 'Clear':
+                    image.src = '';
+
+                    break;
+                default:
+                    break;
+            }
+        })
+})
