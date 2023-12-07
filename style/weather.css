@@ -95,42 +95,39 @@ h1,h3{
     padding: 3em 2em;
     overflow-Y: scroll;
 }
-.panel form{
-    margin-bottom:  3em;
-}
-.submit {
-    position: absolute;
-    top:0;
-    right:0;
-    padding: 1.5em;
-    margin:0;
-    border:none;
-    outline:none;
-    font-size: 1.2em;
-    transition: 0.4s;
-}
 
-.submit:hover{
-    background: rgb(48, 48, 138);
-    color: #fff;
-}
 
-.search {
+.search-box {
+    display: flex;
     background: none;
     border:none;
     border-bottom: 1px #ccc solid;
     padding: 0 1em 0.5em 0;
     width:80%;
     color: #fff;
-    font-size: 1.1em;
+ 
 }
 
-.search:focus{
-    outline:none;
-}
-
-.search::placeholder{
+.search-box button {
+    position: relative;
     color: #fff;
+    background: transparent;
+    width:40px;
+    height: 20px;
+    padding: 0 40px 0 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.search-box input:focus{
+    outline:none;
+    
+}
+
+.search-box input::placeholder{
+    color: black;
+    text-transform: capitalize;
 }
 
 .panel ul {
