@@ -1,50 +1,26 @@
 const app = document.querySelector('.weather-app');
-const temp = document.querySelector('.temp');
-const dateOutput = document.querySelector('.date');
-const timeOutput = document.querySelector('.time');
-const conditionOutput = document.querySelector('.condition');
-const nameOutput = document.querySelector('.name');
-const iconOutput = document.querySelector('.icon');
-const cloudOutput = document.querySelector('.cloud');
-const humidityOutput = document.querySelector('.humidity');
-const windOutput = document.querySelector('.wind');
-const form = document.getElementById("locationinput");
+const search = document.querySelector('.search-box');
 
-const search = document.querySelector('.search');
-const btn = document.querySelector('.submit');
-const cities = document.querySelectorAll('.city');
+search.addEventListener('click', () => {
+    const APIKey = '2d9656e12a5cfa0fd6b7cbebd84d6e23';
+    const city = document.querySelector('.search-box input').value;
+    if (city == '')
+        return;
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}&lang=kr`)
+        .then(response => response.json()).then(json => {
 
-let cityInput = "London";
+            const city = document.querySelector('.weather-app .city-time .name');
+            const temperature = document.querySelector('.weather-app .temp');
+            const description = document.querySelector('.weather .description');
+            const cloudy = document.querySelector('.details .cloud');
+            const humidity = document.querySelector('.details .humidity');
+            const wind = document.querySelector('.details .Wind');
 
+            city.innerHTML = `${json.name}`;
+            temperature.innerHTML = `${parseInt(json.main.temp)}<span>&#176;</span>`;
+            description.innerHTML = `${json.weather[0].description}`;
+            humidity.innerHTML = `${json.main.humidity}%`;
+            wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
+        })
 
-city.addEventListener('click', (e) => {
-    cityInput = e.target.innerHTML;
-    fetchWeatherData();
-    app.style.opacity = "0";
-});
-
-if (search.value.length == 0) {
-    alert('please type in a city name');
-} else {
-    cityInput = search.value;
-    fetchWeatherData();
-
-    search.value = "";
-    app.style.opacity = "0";
-}
-
-e.preventDefault();
-
-
-function dayOfTheWeek(day, month, year) {
-    const weekday = [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-    ];
-    return weekday[new Date(`${day}/${month}/${year}`).getDay()];
-
+})
