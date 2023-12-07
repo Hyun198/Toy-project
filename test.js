@@ -10,7 +10,7 @@ search.addEventListener('click', () => {
     if (city == '')
         return;
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}&lang=kr`)
         .then(response => response.json()).then(json => {
 
             const image = document.querySelector('.weather-box img');
@@ -31,11 +31,11 @@ search.addEventListener('click', () => {
                     break;
 
                 case 'Snow':
-                    image.src = '../img/snow.png';
+                    image.src = '../img/snowy.png';
                     break;
 
                 case 'Moist':
-                    image.src = '../img/google.png';
+                    image.src = '../img/moist.png';
                     break;
                 case 'Haze':
                     image.src = '../img/google.png';
