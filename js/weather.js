@@ -16,6 +16,7 @@ search.addEventListener('click', () => {
             const cloudy = document.querySelector('.details .cloud');
             const humidity = document.querySelector('.details .humidity');
             const wind = document.querySelector('.details .Wind');
+            const cityTime = document.querySelector('.city-time .time');
 
             const weatherIcon = document.querySelector('.weather-icon i');
 
@@ -61,7 +62,7 @@ cities.forEach(city => {
     city.addEventListener('click', function () {
         const selectedCity = this.textContent;
         const APIKey = '2d9656e12a5cfa0fd6b7cbebd84d6e23';
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${selectedCity}&units=metric&appid=${APIKey}&lang=kr`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${selectedCity}&units=metric&appid=${APIKey}`)
             .then(response => response.json()).then(json => {
 
                 const city = document.querySelector('.weather-app .city-time .name');
@@ -98,12 +99,33 @@ cities.forEach(city => {
                         weatherIcon.innerHTML = `<i class="fa-solid fa-sun">`
                         break;
                 }
-
                 city.innerHTML = `${json.name}`;
                 temperature.innerHTML = `${parseInt(json.main.temp)}<span>&#176;</span>`;
                 description.innerHTML = `${json.weather[0].description}`;
                 humidity.innerHTML = `${json.main.humidity}%`;
                 wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
-            })
+
+                console.log(json);
+
+                const localTime = new Date();
+                const localOffset = localTime.getTimezoneOffset();
+                const utcTime = new Date();
+                console.log(localOffset);
+                const cityOffsetInMilliseconds = localOffset * 60 * 1000;
+                const localTimeInMilliseconds = utcTime.getTime() - cityOffsetInMilliseconds;
+                const localTimeInLocal = new Date(localTimeInMilliseconds);
+
+                const localTimeString = new Intl.DateTimeFormat('ko-KR', {
+                    timeZone: 'America/New_York', // 도시의 IANA 시간대로 설정
+                    weekday: 'long',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: 'numeric',
+                    minute: 'numeric',
+                    second: 'numeric'
+                }).format(localTimeInLocal);
+
+                console.log('Local Time:', localTimeString);
+            });
     });
 });
