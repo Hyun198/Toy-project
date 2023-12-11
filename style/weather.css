@@ -1,16 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins:wght@400;600&family=Rubik&family=Rubik+Dirt&display=swap');
+
+
+
 body{
     margin:0;
     font-family: 'Rubik', sans-serif ;
-    
 }
 
 *{
     box-sizing: border-box;
 }
 
-h1,h3{
+h1{
     font-weight: 400;
 }
+
+h3{
+    font-weight:500;
+}
+.brand-title {
+    font-size: 2em;
+    color:rgb(168, 189, 221);
+}
+
 
 
 .weather-app{
@@ -73,7 +85,7 @@ h1,h3{
 .city-time h1 {
     margin: 0;
     margin-bottom:  0.2rem;
-    font-size:3em;
+    font-size:4em;
 }
 
 .temp {
