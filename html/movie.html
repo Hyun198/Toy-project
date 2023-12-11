@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+    <link rel="stylesheet" href="../style/movie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>oppenheimer</header>
+    <nav>
+        <ul>
+            <li>cillian <br>muryphy</li>
+            <li>emily <br>blunt</li>
+            <li>matt <br>damon</li>
+            <li>robert <br>downey jr.</li>
+            <li>florence <br>pugh</li>
+        </ul>
+    </nav>
+    <div class="slides">
+        <div class="container">
+            <div class="content">
+                <div class="image">
+                    <img src="../img/Oppen_see.jpg">
+                </div>
+                <div class="text-box">
+                    <h2>it's the begining</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slides">
+        <div class="container">
+            <div class="content">
+                <div class="image">
+                    <img src="../img/nuclear-test.webp">
+                </div>
+                <div class="text-box">
+                    <h2>‘Now I Am Become Death,<br>the Destroyer of Worlds.’</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slides">
+        <div class="container">
+            <div class="content">
+                <div class="image">
+                    <img src="../img/Oppen_poster.jpg">
+                </div>
+                <div class="text-box">
+                    <h2>Rotten tomato</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="media-info">
+        <a href="#"><i class="fa-sharp fa-solid fa-compact-disc"></i></a>
+        <a href="#"><i class="fa-solid fa-ticket"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({
+            reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 400
+        });
+        ScrollReveal().reveal(".text-box", { delay: 500, origin: 'left' });
+    </script>
+</body>
+
+</html>
