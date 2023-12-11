@@ -79,16 +79,20 @@ cities.forEach(city => {
                 switch (json.weather[0].main) {
                     case 'Clear':
                         weatherIcon.innerHTML = `<i class="fa-solid fa-sun">`
+                        app.style.backgroundImage = `url(../img/sunny.jpg)`
                         break;
                     case 'Rain':
                         weatherIcon.innerHTML = `<i class="fa-solid fa-cloud-showers-heavy"></i>`
+                        app.style.backgroundImage = `url(../img/rain.jpg)`
                         break;
                     case 'Clouds':
                         weatherIcon.innerHTML = `<i class="fa-solid fa-cloud"></i>`
+                        app.style.backgroundImage = `url(../img/clouds.jpg)`
                         break;
 
                     case 'Snow':
                         weatherIcon.innerHTML = `<i class="fa-regular fa-snowflake"></i>`
+                        app.style.backgroundImage = `url(../img/snow.jpg)`
                         break;
 
                     case 'Moist':
@@ -110,7 +114,7 @@ cities.forEach(city => {
                 const timezone = json.timezone;
                 const timezoneOffset = timezone / 60;
                 const curTime = moment().utcOffset(timezoneOffset).format("h:mm A MMM Do dddd");
-                console.log(curTime);
+
                 time.innerHTML = `${curTime}`;
 
 
