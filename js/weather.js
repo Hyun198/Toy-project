@@ -66,11 +66,13 @@ cities.forEach(city => {
             .then(response => response.json()).then(json => {
 
                 const city = document.querySelector('.weather-app .city-time .name');
+                const time = document.querySelector('.weather-app .city-time .time');
                 const temperature = document.querySelector('.weather-app .temp');
                 const description = document.querySelector('.weather .description');
                 const cloudy = document.querySelector('.details .cloud');
                 const humidity = document.querySelector('.details .humidity');
                 const wind = document.querySelector('.details .Wind');
+
 
                 const weatherIcon = document.querySelector('.weather-icon i');
 
@@ -105,27 +107,13 @@ cities.forEach(city => {
                 humidity.innerHTML = `${json.main.humidity}%`;
                 wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
 
-                console.log(json);
+                const timezone = json.timezone;
+                const timezoneOffset = timezone / 60;
+                const curTime = moment().utcOffset(timezoneOffset).format("h:mm A MMM Do dddd");
+                console.log(curTime);
+                time.innerHTML = `${curTime}`;
 
-                const localTime = new Date();
-                const localOffset = localTime.getTimezoneOffset();
-                const utcTime = new Date();
-                console.log(localOffset);
-                const cityOffsetInMilliseconds = localOffset * 60 * 1000;
-                const localTimeInMilliseconds = utcTime.getTime() - cityOffsetInMilliseconds;
-                const localTimeInLocal = new Date(localTimeInMilliseconds);
 
-                const localTimeString = new Intl.DateTimeFormat('ko-KR', {
-                    timeZone: 'America/New_York', // 도시의 IANA 시간대로 설정
-                    weekday: 'long',
-                    month: 'long',
-                    day: 'numeric',
-                    hour: 'numeric',
-                    minute: 'numeric',
-                    second: 'numeric'
-                }).format(localTimeInLocal);
-
-                console.log('Local Time:', localTimeString);
             });
     });
 });
