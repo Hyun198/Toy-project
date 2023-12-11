@@ -108,8 +108,9 @@ cities.forEach(city => {
                 city.innerHTML = `${json.name}`;
                 temperature.innerHTML = `${parseInt(json.main.temp)}<span>&#176;</span>`;
                 description.innerHTML = `${json.weather[0].description}`;
-                humidity.innerHTML = `${json.main.humidity}%`;
-                wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
+                cloudy.innerHTML = `${json.clouds.all} %`;
+                humidity.innerHTML = `${json.main.humidity} %`;
+                wind.innerHTML = `${parseInt(json.wind.speed)} Km/h`;
 
                 const timezone = json.timezone;
                 const timezoneOffset = timezone / 60;
@@ -117,7 +118,7 @@ cities.forEach(city => {
 
                 time.innerHTML = `${curTime}`;
 
-
+                console.log(json);
             });
     });
 });
