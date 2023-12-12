@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <header>oppenheimer</header>
     <nav>
         <ul>
             <li>cillian <br>muryphy</li>
@@ -20,6 +19,12 @@
             <li>florence <br>pugh</li>
         </ul>
     </nav>
+    <header>
+        oppenheimer
+
+    </header>
+    <p> shot with <span>IMAX</span> film cameras</p>
+
     <div class="slides">
         <div class="container">
             <div class="content">
@@ -38,7 +43,7 @@
                 <div class="image">
                     <img src="../img/nuclear-test.webp">
                 </div>
-                <div class="text-box">
+                <div class="text-box2">
                     <h2>‘Now I Am Become Death,<br>the Destroyer of Worlds.’</h2>
                 </div>
             </div>
@@ -50,8 +55,10 @@
                 <div class="image">
                     <img src="../img/Oppen_poster.jpg">
                 </div>
-                <div class="text-box">
+                <div class="text-box3">
+                    <img src="../img/tomato.png">
                     <h2>Rotten tomato</h2>
+                    <h3>96%</h3>
                 </div>
             </div>
         </div>
@@ -70,9 +77,11 @@
             reset: true,
             distance: '60px',
             duration: 2500,
-            delay: 400
+            delay: 500
         });
         ScrollReveal().reveal(".text-box", { delay: 500, origin: 'left' });
+        ScrollReveal().reveal(".text-box2", { delay: 500, origin: 'right' });
+        ScrollReveal().reveal(".text-box3", { delay: 500, origin: 'bottom' });
     </script>
 </body>
 
