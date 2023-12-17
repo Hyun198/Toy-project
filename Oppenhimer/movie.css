@@ -18,63 +18,59 @@ html {
     color-scheme: dark;
 }
 
-body {
-    min-height: 100vh;
-    perspective: 1000px;
-
-}
 
 header {
-    display: flex;
-    justify-content: center;
     color: #E07108;
-    font-size: 4em;
+    text-align: center;
     margin-bottom: 40px;
     text-transform: uppercase;
+    background-color: aliceblue;
 }
 
 p {
     color: #E07108;
     text-align: center;
     text-transform: uppercase;
-    font-size: 3em;
+    font-size: 2em;
 }
+
 
 p span {
     font-family: 'Fira Sans', sans-serif;
     font-size: 1.2em;
 }
 
-nav {
-    text-align: center;
-}
-
-nav li {
-    display: inline-block;
-    color: white;
-    font-size: 3rem;
-    text-transform: uppercase;
-    margin-right: 100px;
-}
-
 /* head line end*/
 
-.container {
-    width: 80%;
-    margin: 80px auto;
-
-}
-
-.row {
+main {
     display: flex;
-    border: 3px solid limegreen;
-    align-items: center;
-    flex-wrap: wrap;
 }
 
-.col {
-    flex-basis: 50%;
-    min-height: 500px;
+aside {
+    width: 30%;
+    aspect-ratio: 9/16;
+    background-color: aqua;
+}
+
+aside img {
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    background: white;
+}
+
+iframe {
+    width: 600px;
+    height: 400px;
+
 }
 
 .feature-img {
@@ -96,7 +92,13 @@ nav li {
 
 
 
+/*footer*/
 
+footer {
+    display: block;
+    clear: both;
+    background: #E07108;
+}
 
 .media-info {
     position: relative;
