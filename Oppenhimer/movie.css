@@ -57,63 +57,34 @@ main {
     flex-wrap: wrap;
 }
 
-aside {
-    width: 30%;
-    aspect-ratio: 9/16;
-}
 
-.aside-bg {
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
-    opacity: 1;
-
-}
 
 section {
-    width: 70%;
-    position: relative;
+    width: 100%;
     align-items: center;
     justify-content: center;
 
 }
 
 section .text-box {
-    position: absolute;
-    left: 25%;
-    top: 5%;
+    align-items: center;
+    margin: auto;
+    left: 50%;
+    text-align: center;
 }
 
 section p {
-    text-align: center;
     padding: 40px;
 }
 
 iframe {
-    position: absolute;
+    position: relative;
     left: 25%;
-    top: 25%;
     width: 1000px;
     height: 600px;
     border: 5px solid #E07108;
 }
 
-.feature-img {
-    width: 83%;
-    margin: auto;
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.youtube-video {
-    display: flex;
-    height: 350px;
-    border: 3px solid yellow;
-    width: 85%;
-    align-items: center;
-    margin: 50px 10px;
-}
 
 /*section end*/
 
@@ -235,7 +206,6 @@ footer p {
 
     }
 
-    aside,
     section,
     article,
     footer {
