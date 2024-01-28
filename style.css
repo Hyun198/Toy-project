@@ -1,0 +1,34 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    margin:auto;
+    background: black;
+}
+
+#user-input{
+    width: 150px;
+    height: 2rem;
+    border: 3px solid limegreen;
+    border-radius: 3rem;
+}
+
+#user-input:placeholder-shown{
+    text-align: center;
+}
+
+#play-btn{
+    width: 100px;
+    border-radius: 2rem;
+}
