@@ -1,0 +1,30 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background: wheat;
+
+}
+
+.input_form{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.button_form{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+.button_form button{
+    outline: none;
+    border:none;
+    cursor: pointer;
+}
+
+.img_container{
+    text-align: center;
+
+}

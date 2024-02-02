@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CGV</title>
+</head>
+<body>
+
+    <div class="cgv_fetch">
+        <button onclick="CallCgv()">시간 불러오기</button>
+    </div>
+
+    <div class="input_form">
+        시간: <input type="number" id="hour" placeholder="시간" required />
+        
+        분: <input type="number" id="min" placeholder="분" required/>
+    </div>
+    <div class="button_form">
+        <button onclick="calculateTime1()">마감1</button>
+        <button onclick="calculateTime2()">마감2</button>
+    </div>
+    <p id="res_time"></p>
+    <div class="img_container">
+        <img src="시간표.png" alt="시간표" />
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
