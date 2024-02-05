@@ -6,7 +6,10 @@
 //끝난 텝은, 끝난 아이템만, 진행중 탭은 진행중인것만 (필터링)
 //전체탭은 전체아이템
 
+
+
 let taskInput = document.getElementById("task-input");
+
 let AddButton = document.getElementById("add");
 let taskList = [];
 let tabs = document.querySelectorAll(".task-tabs div");
@@ -16,6 +19,8 @@ let filterList=[];
 let doneList=[];
 
 
+
+
 for(let i=1; i<tabs.length; i++){
   tabs[i].addEventListener("click", function(event) {
     filter(event)
@@ -23,6 +28,12 @@ for(let i=1; i<tabs.length; i++){
 }
 
 AddButton.addEventListener("click", addTask);
+taskInput.addEventListener("keydown", function(event) {
+  if(event.key === "Enter"){
+    addTask();
+  }
+})
+
 
 function addTask() {
   let task = {
@@ -91,7 +102,7 @@ function random_id() {
 function deleteTask(id) {
     for(let i=0; i<taskList.length; i++){
         if(taskList[i].id == id){
-            taskList.pop(taskList[i]);
+            taskList.splice(i,1);
             break;
         }
     }
