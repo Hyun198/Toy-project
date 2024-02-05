@@ -1,5 +1,5 @@
-body{
-    margin:0;
+body {
+    margin: 0;
 
     height: 100vh;
     background-image: url('background.jpg');
@@ -7,43 +7,59 @@ body{
     background-size: cover;
 }
 
-.container{
+.container {
     background-color: white;
-    min-height:100vh;
+    min-height: 100vh;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.container{
+.container {
     text-align: center;
 }
 
-.task-area{
-    border:1px solid lightgrey;
+.task-area {
+    border: 1px solid lightgrey;
 }
 
-.task-tabs{
-    display:flex;
+.task-tabs {
+    display: flex;
     position: relative;
     border-bottom: 1px solid lightgray;
 
 }
-.task-tabs div{
-    padding: 1rem;
+
+.task-tabs div {
+    position: relative;
+    letter-spacing: 0.5px;
+    padding: 5px 10px;
     cursor: pointer;
 }
 
-#under-line{
-    width: 60px;
-    height: 4px;
-    background: purple;
+.task-tabs div::after {
+    content: "";
     position: absolute;
-    left:0px;
-    top:52px;
-    padding:0px;
+    background-color: #ff3c78;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -1px;
+    transition: 0.3s;
+
 }
 
+.task-tabs div:hover {
+    color: #ff3c78;
+}
+
+.task-tabs div:hover:after {
+    width: 100%;
+
+}
+
+
+
 .task {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     padding: 0.8rem;
     border-bottom: 1px solid lightgray;
