@@ -7,10 +7,21 @@
 //전체탭은 전체아이템
 
 let taskInput = document.getElementById("task-input");
-
 let AddButton = document.getElementById("add");
-
 let taskList = [];
+let tabs = document.querySelectorAll(".task-tabs div");
+
+let mode = "all";
+let filterList=[];
+let doneList=[];
+
+
+for(let i=1; i<tabs.length; i++){
+  tabs[i].addEventListener("click", function(event) {
+    filter(event)
+  })
+}
+
 AddButton.addEventListener("click", addTask);
 
 function addTask() {
@@ -26,23 +37,32 @@ function addTask() {
 }
 
 function render() {
-  let result = "";
-  for (let i = 0; i < taskList.length; i++) {
 
-    if(taskList[i].isComplete == true) {
+  if(mode === "all"){
+    List = taskList;
+  }else if(mode==="doing"){
+    List= filterList;
+  }else if(mode==="done"){
+    List= doneList;
+  }
+
+
+  let result = "";
+  for (let i = 0; i < List.length; i++) {
+    if(List[i].isComplete == true) {
         result += `<div class="task">
-        <div class="task-done">${taskList[i].taskContent}</div>
+        <div class="task-done">${List[i].taskContent}</div>
         <div>
-            <button onclick="toggleComplete('${taskList[i].id}')">Check</button>
-            <button onclick="deleteTask('${taskList[i].id}')">Delete</button>
+            <button onclick="toggleComplete('${List[i].id}')">Check</button>
+            <button onclick="deleteTask('${List[i].id}')">Delete</button>
         </div>
     </div>`
     }else{
         result += `<div class="task">
-        <div>${taskList[i].taskContent}</div>
+        <div>${List[i].taskContent}</div>
         <div>
-            <button onclick="toggleComplete('${taskList[i].id}')">Check</button>
-            <button onclick="deleteTask('${taskList[i].id}')">Delete</button>
+            <button onclick="toggleComplete('${List[i].id}')">Check</button>
+            <button onclick="deleteTask('${List[i].id}')">Delete</button>
         </div>
 </div>`;
     }
@@ -76,4 +96,28 @@ function deleteTask(id) {
         }
     }
     render();
+}
+
+function filter(event) {
+  console.log("filter");
+  mode = event.target.id;
+  filterList=[];
+  doneList=[];
+  if(mode === "all"){
+    render();
+  }else if(mode==="doing"){
+    for(let i=0; i<taskList.length; i++){
+      if(taskList[i].isComplete === false){
+        filterList.push(taskList[i]);
+      }
+    }
+    render();
+  }else if(mode==="done"){
+    for(let i=0; i<taskList.length; i++){
+      if(taskList[i].isComplete === true){
+        doneList.push(taskList[i]);
+      }
+    } 
+    render();
+  }
 }
