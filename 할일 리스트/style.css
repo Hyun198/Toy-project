@@ -33,6 +33,12 @@ body {
     letter-spacing: 0.5px;
     padding: 5px 10px;
     cursor: pointer;
+    color:black;
+}
+
+.task-tabs div.active{
+
+    color:red;
 }
 
 .task-tabs div::after {
