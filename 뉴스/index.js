@@ -4,8 +4,7 @@ const LatestNews = async () => {
     url = new URL(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${api_key}`);
     const response = await fetch(url)
     const data = response.json();
-    news = data.articles
-    console.log(news);
+    console.log(data.articles);
 
 }
 
