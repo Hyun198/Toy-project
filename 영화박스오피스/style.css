@@ -1,0 +1,15 @@
+.movies {
+    border: 1px solid red;
+
+}
+
+.movies-board {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.movie-img {
+    max-width: 100%;
+    max-height: 300px;
+}
