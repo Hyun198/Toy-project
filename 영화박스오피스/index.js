@@ -1,6 +1,21 @@
 const api_key = `924e226f51dd500f8092112eab54833f`
 const KMDB_API_KEY = 'Q0YF214E5O2XQR10ZF51'
-let url = `https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt=20240218`;
+
+const today = new Date();
+const currentDay = today.getDay();
+//일요일로 설정
+today.setDate(today.getDate() - currentDay);
+
+const year = today.getFullYear();
+let month = today.getMonth() + 1;
+let day = today.getDate();
+
+month = month < 10 ? '0' + month : month;
+day = day < 10 ? '0' + day : day;
+let targetDt = `${year}${month}${day}`;
+console.log(targetDt);
+
+let url = `https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&weekGb=0&targetDt=${targetDt}`;
 
 let moviesList = [];
 let posterList = [];
