@@ -54,7 +54,7 @@ class CircularQueue {
         } else {
             let i
             let str = ''
-            for (i = this.front; i !== this.rear; i = (i + 1) % this.capacity) {
+            for (i = this.front; i < this.rear; i = (i + 1) % this.capacity) {
                 str += this.items[i] + " "
             }
             str += this.items[i]
@@ -63,13 +63,37 @@ class CircularQueue {
     }
 }
 
-const queue = new CircularQueue(5);
+class Node {
+    constructor(value) {
+        this.value = value
+        this.next = null
+    }
+}
 
-queue.enqueue(10)
-queue.enqueue(20)
-queue.enqueue(30)
-queue.enqueue(40)
-queue.enqueue(50)
+class LinkedList {
+    constructor() {
+        this.head = null
+        this.size = 0
+    }
+    isEmpty() {
+        return this.size === 0
+    }
+    getSize() {
+        return this.size
+    }
 
-console.log(queue.isFull())
-queue.print();
+    prepend(value) {
+        const node = new Node(value)
+        if (this.isEmpty()) {
+            this.head = node
+        } else {
+            node.next = this.head
+        }
+        this.size++
+    }
+}
+
+const list = new LinkedList()
+list.prepend(10)
+list.prepend(20)
+list.prepend(30)
